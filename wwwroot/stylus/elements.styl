@@ -1,0 +1,191 @@
+/*! 
+* elements 
+*/
+
+//logo
+div.logo
+    display:flex
+    justify-content: flex-start
+    align-items: center
+    overflow: hidden
+    width: logoDimens
+    @media phoneRule
+        width: logoDimens*0.3
+    @media tabletRule
+        width: logoDimens*0.2
+    @media desktopRule
+        width: logoDimens*0.085
+    @media lgdesktopRule
+        width: logoDimens*0.075
+    @media ie
+        height:50px
+        width:55px
+div.logo svg
+    display: block
+    width: 100%
+    height: auto
+    @media ie
+        width:55px
+        height:50px
+
+#mNav div.logo 
+    @media phoneRule
+        width: logoDimens*0.20
+    @media tabletRule
+        width: logoDimens*0.125
+#mNav div.logo svg
+    max-height: navSpacer*0.9
+#cNav div.logo
+    @media desktopRule
+        margin-top: marXXS
+        width: logoDimens*0.06
+    @media lgdesktopRule
+        margin-top: marXXS
+        width: logoDimens*0.06
+     @media ie
+        height:50px
+        width:55px
+
+//cta buttons
+.cta
+    display: inline-block
+    padding: 0.75em 2.5em 0.7em 1em
+    margin: marXS 0
+    font-weight: 700 !important
+    background-color: white
+    color: brand1
+    position: relative
+a.cta:link, a.cta:visited
+    color: brand1
+    text-decoration: none
+a.cta:hover, a.cta:active
+    color: white
+    background-color: brand3
+a.cta:hover::after
+    content: '>'
+    position: absolute
+    right: 0.75em
+    top: 0.70em
+.rev .cta
+    background-color: white
+    color: brand1
+ .rev a.cta:link, .rev a.cta:visited
+    color: brand1
+.rev a.cta:hover, .rev a.cta:active
+    color: white
+    background-color: brand3
+
+
+
+// icons
+.icon 
+    background-color: whiteAlp05
+    padding: padStd
+    font-size: 1.5rem
+    display: inline-block
+a#toTop
+    position: fixed
+    bottom: 3vw
+    right: 3vw
+    text-decoration: none
+    opacity: 0
+
+
+
+
+//media
+.pbVideo
+    position: relative
+    padding-bottom: 56.25%
+    padding-top: 0
+    height: 0
+.pbVideo iframe 
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+div.video
+    position: relative
+div.video > div
+    width: 100%
+    height: 100%  
+
+.hidden-xs
+    display: none
+div#vidHolder
+    position: absolute
+    top: 0
+    left: 0px
+    width: 100%
+    height: 100%
+    overflow: hidden
+video.hidden-xs
+    width: 100%
+    height: 100%
+    object-fit: cover
+@media dtrigger
+    video.hidden-xs
+        width: 100%
+        height: 100%
+@media dtrigger
+    .hidden-xs
+        display: block
+       
+
+
+
+
+
+// lists
+ul, ol
+    border-top:1px solid brand1
+    border-bottom: 2px solid brand1
+    padding: 0.3em 0.5em 0.5em 0em
+    {marginT}
+.rev ul,.rev ol
+    border-top:1px solid lightGrey
+    border-bottom: 2px solid lightGrey
+li
+    list-style-type: none
+    padding: 0.7em 3em 0.7em 0.5em
+    border-bottom: 1px solid brand1
+.rev li
+    border-bottom: 1px solid lightGrey
+li:last-child
+    border-bottom: none
+@media desktopRule
+    ul, ol
+        //
+@media lgdesktopRule
+    ul, ol
+        //
+nav ul, nav li
+    border:none
+    padding:0
+nav ul
+    display: flex
+    justify-content: space-between
+    {marginNo}
+nav li 
+    padding: 0 padStd
+footer nav ul
+    flex-direction: column
+    {marginT}
+footer nav li
+    padding: 1.0em 0
+ul.iconList
+    border: none
+ul.iconList li
+    padding: 0.1em 1em 0.3em 0
+    font-size: 97%
+    border: none
+
+
+
+
+
+
+@media ie
+    //target IE (not edge)

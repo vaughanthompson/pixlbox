@@ -1,0 +1,166 @@
+/*!
+*
+*
+*
+*
+* start custom stylesheets
+*
+*
+*
+*
+*
+*/
+
+// vars
+brand1 = rgba(10,10,10, 1.0)
+brand2 = rgba(255,255,255, 1.0)
+brand3 = rgba(235,10,10, 1.0)
+white = rgba(255,255,255,1.0)
+whiteAlp75 = rgba(255,255,255,0.75)
+whiteAlp50 = rgba(255,255,255,0.5)
+whiteAlp25 = rgba(255,255,255,0.25)
+whiteAlp10 = rgba(255,255,255,0.1)
+whiteAlp05 = rgba(255,255,255,0.05)
+black = rgba(0,0,0,1.0)
+blackAlp75 = rgba(0,0,0,0.75)
+blackAlp50 = rgba(0,0,0,0.5)
+blackAlp25 = rgba(0,0,0,0.25)
+blackAlp10 = rgba(0,0,0,0.1)
+brand3Alp = rgba(10,10,235, 1.0)
+brand3edit = rgba(235,10,10, 0.9)
+brand3edit1 = rgba(235,10,10, 0.7)
+brand1edit = rgba(5,5,15, 0.9)
+
+halfLight = rgba(white, alpha:0.7)
+halfDark = rgba(black, alpha:0.7)
+lightGrey = rgba(222,222,222,1.0)
+mainBG = rgba(245,245,245,1.0)
+
+padXL = 10vw
+padL = 5vw
+padM = 3vw
+padStd = 1.5vw
+marStd = 1.5vw
+padXS = 0.65vw
+marXS = 0.65vw
+padXXS = 0.3vw
+
+marXL = 10vw
+marL = 5vw
+marM = 3vw
+marStd = 1.5vw
+marXS = 0.65vw
+marXXS = 0.3vw
+
+navSpacer = 10vh
+navSpacerL = 15vh
+
+
+fontStack = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+
+//responsive breakpoint & media queries
+mBreakPoint = 750px
+tBreakPoint = 1100px
+dBreakPoint = 1500px
+lgBreakPoint = 1900px
+
+phoneRule = "screen and (max-width: mBreakPoint )"
+tabletRule = "screen and (min-width: mBreakPoint) and (max-width: tBreakPoint )"
+desktopRule = "screen and (min-width: tBreakPoint) and (max-width: dBreakPoint )"
+lgdesktopRule = "screen and (min-width: dBreakPoint)"
+
+mtrigger = "screen and (max-width: tBreakPoint )"
+ttrigger = "screen and (min-width: mBreakPoint )"
+dtrigger = "screen and (min-width: tBreakPoint )"
+
+phLandscape = "screen and (max-width: mBreakPoint) and (orientation: landscape)"
+tbLandscape = "screen and (min-width: mBreakPoint) and (max-width: tBreakPoint) and (orientation: landscape)"
+
+ie = "all and (-ms-high-contrast: none), (-ms-high-contrast: active)"
+
+
+$hideItAll = none !important
+
+// responsive logos
+logoDimens = 40vw
+
+
+// misc blocks
+marginNo = @block {
+    margin: 0
+}
+marginM = @block {
+    margin-bottom: 2vh
+}
+marginL = @block {
+    margin-left: 2vw
+}
+marginR = @block {
+    margin-right: 2vw
+}
+marginT = @block {
+    margin-bottom: 4vh
+}
+marginBT = @block {
+    margin-bottom: 1.5vh
+}
+marginVT = @block {
+    margin-top: 2vh
+    margin-bottom: 2vh
+}
+marginALL = @block {
+    margin: 2vh
+}
+wh100 = @block {
+    width:100%
+    height:100%
+}
+
+test = @block {
+    border:1px solid cyan
+}
+
+
+
+
+// basic defaults
+html, body
+    width: 100%
+    height: 100%
+    font-family: 'Inter', fontStack
+@supports (font-variation-settings: normal)
+    html, body
+        font-family: "Inter var", fontStack
+body
+    background-color: mainBG
+    color: brand1
+    // background: linear-gradient(top, white, brand1)
+hr
+    border: none
+    border-bottom: 1px solid lightGrey
+
+
+
+
+// tests - remove for live
+/*
+@media phoneRule
+    #alert section:after
+        content: '***MOBILE***'
+@media tabletRule
+    #alert section:after
+        content: '***TABLET***'
+@media desktopRule
+    #alert section:after
+        content: '***DESKTOP***'        
+@media lgdesktopRule
+    #alert section:after
+        content: '***LARGE DESKTOP***'   
+@media phLandscape
+    #alert section:after
+        content: '***phlandscape***'
+@media tbLandscape
+    #alert section:after
+        content: '***tbltlandscape***'        
+*/

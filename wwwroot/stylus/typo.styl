@@ -1,0 +1,185 @@
+/*! 
+* typography 
+*/
+html, body
+    font-weight: 350
+    font-size: 16px
+
+a:link, a:visited
+    text-decoration: underline
+a:link, span,
+.rev a:link,.rev span,
+.mblnav a:link, .mblnav a:visited
+    color: brand3
+a:visited, .rev a:visited
+    color: brand3
+a:hover, a:active
+    text-decoration: none
+nav a:link, nav a:visited
+    color: brand1
+    text-decoration: none
+nav a:link:hover, nav a:visited:hover,    
+nav a:link.activeLink, nav a:visited.activeLink 
+    color: brand3
+
+p, li, a, td
+    color: brand1
+    line-height: 145%
+    letter-spacing: -0.03rem
+p
+    max-width: 90%
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+    color: brand1
+    margin:0
+    margin-bottom: 0.1rem
+    max-width: 95%
+h1, .h1
+    letter-spacing: -0.1rem
+    line-height: 110%
+h2, .h2
+    letter-spacing: -0.075rem
+    line-height: 110%    
+h3, .h3,
+h4, .h4
+    letter-spacing: -0.06rem
+    line-height: 125%
+h5, .h5,
+h6, .h6
+    letter-spacing: -0.04rem
+    line-height: 140%
+h1, .h1,
+h2, .h2,
+h3, .h3
+    font-weight: 800
+h4, .h4,
+h5, .h5,
+h6, .h6
+    font-weight: 600
+h1 strong, .h1 strong,
+h2 strong, .h2 strong,
+h3 strong, .h3 strong,
+h5 strong, .h5 strong
+    font-weight: 300
+h4 strong, .h4 strong,
+h6 strong, .h6 strong
+    font-weight: 300
+p a,
+nav a
+    font-weight: 500
+.rev h1,.rev h2,.rev h3,.rev h4,.rev h5,.rev h6,
+.rev .h1,.rev .h2,.rev .h3,.rev .h4,.rev .h5,.rev .h6,
+.rev p,.rev li,.rev a,.rev td
+    color: white
+.huge
+    letter-spacing: -0.06em
+
+@media phoneRule
+    // elements
+    p, li, a, td
+        font-size: 1.0rem
+    p
+        margin-top: 0.5em
+        margin-bottom: 0.5em    
+    h1, .h1,
+    h2, .h2
+        font-size: 1.6rem
+    h3, .h3
+        font-size: 1.3rem
+    h4, .h4
+        font-size: 1.2rem         
+    h5, .h5
+        font-size: 1.1rem
+    h6, .h6
+        font-size: 1.0rem  
+    // modifiers    
+    .huge
+        font-size: 2.4rem 
+    /*    
+    .grid *
+        font-size: 1.1rem
+        font-weight: 600
+*/
+@media tabletRule
+    // elements
+    p, li, a, td
+        font-size: 1.0rem
+    h1, .h1
+        font-size: 2.6rem
+    h2, .h2
+        font-size: 2.2rem
+    h3, .h3
+        font-size: 1.6rem 
+    h4, .h4
+        font-size: 1.3rem   
+    h5, .h5
+        font-size: 1.15rem
+    h6, .h6
+        font-size: 1.1rem   
+    // modifiers   
+    .huge
+        font-size: 3.5rem 
+    .small
+        font-size: 90%        
+
+@media desktopRule
+    // elements
+    p, li, a, td
+        font-size: 1rem 
+    h1, .h1
+        font-size: 3.2rem
+        line-height: 100%
+    h2, .h2
+        font-size: 2.3rem
+    h3, .h3
+        font-size: 1.6rem
+    h4, .h4
+        font-size: 1.3rem 
+    h5, .h5
+        font-size: 1.1rem
+    h6, .h6
+        font-size: 1rem     
+    // modifiers    
+    .huge
+        font-size: 4.5rem
+    .small
+        font-size: 85%
+    nav a
+        font-size: 0.95rem
+
+@media lgdesktopRule
+    // elements
+    p, li, a, td
+        font-size: 1rem 
+    h1, .h1
+        font-size: 3.4rem
+        line-height: 105%
+    h2, .h2
+        font-size: 2.5rem        
+    h3, .h3
+        font-size: 1.8rem
+    h4, .h4
+        font-size: 1.35rem 
+    h5, .h5
+        font-size: 1.15rem
+    h6, .h6
+        font-size: 1rem
+    // modifiers
+    .huge
+        font-size: 5rem
+    .small
+        font-size: 85%
+    nav a
+        font-size: 0.95rem
+
+
+
+
+
+
+
+
+
+
+@media ie
+    //target IE (not edge)
