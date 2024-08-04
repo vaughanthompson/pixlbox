@@ -146,12 +146,12 @@ main > * {
   }
 }
 @media screen and (max-width: 1100px) {
-  main > header:first-child {
+  main > header.copy {
     padding-top: 10vw;
   }
 }
 @media screen and (min-width: 1100px) {
-  main > header:first-child {
+  main > header.copy {
     border-top: 2px solid #0a0a0a;
   }
 }
@@ -165,34 +165,44 @@ body > footer {
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
     -o-box-lines: multiple;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   body > footer div.content > section {
+    -webkit-box-flex: 1;
     -o-box-flex: 1;
     box-flex: 1;
+    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    flex-basis: 40%;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   body > footer div.content > section:last-child {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 @media screen and (min-width: 1100px) {
   body > footer div.content {
+    -webkit-box-pack: start;
     -o-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
 @media screen and (min-width: 1100px) {
   body > footer div.content > section {
+    -webkit-box-flex: 1;
     -o-box-flex: 1;
     box-flex: 1;
+    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    flex-basis: 22%;
+    -ms-flex-preferred-size: 22%;
+        flex-basis: 22%;
     padding-right: 3%;
   }
 }
@@ -230,28 +240,40 @@ div#mNav {
   }
 }
 div.content {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: box;
   display: flex;
+  -webkit-box-pack: justify;
   -o-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-orient: vertical;
   -o-box-orient: vertical;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 @media screen and (min-width: 750px) {
   div.content {
+    -webkit-box-orient: horizontal;
     -o-box-orient: horizontal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
     -o-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 750px) {
   div.content > section {
+    -webkit-box-flex: 1;
     -o-box-flex: 1;
     box-flex: 1;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
@@ -259,6 +281,7 @@ div.content {
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
     -o-box-lines: multiple;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }
@@ -285,10 +308,13 @@ main > *:not(.grid) div.content > section {
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   main > *:not(.grid) div.content > section {
+    -webkit-box-flex: 1;
     -o-box-flex: 1;
     box-flex: 1;
+    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    flex-basis: 46%;
+    -ms-flex-preferred-size: 46%;
+        flex-basis: 46%;
     padding: 0.65vw 1.5vw 0.65vw 1.5vw;
   }
 }
@@ -299,25 +325,33 @@ main > *:not(.grid) div.content > section {
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   main > *:first-child div.content {
+    -webkit-box-orient: vertical;
     -o-box-orient: vertical;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 @media screen and (min-width: 750px) {
   main > *:first-child div.content > section {
+    -webkit-box-flex: 1;
     -o-box-flex: 1;
     box-flex: 1;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 @media screen and (max-width: 1100px) {
   main > .grid div.content {
+    -webkit-box-orient: horizontal;
     -o-box-orient: horizontal;
+    -ms-flex-direction: row;
     flex-direction: row;
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
     -o-box-lines: multiple;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding-left: 0.65vw;
     padding-right: paXS;
@@ -325,6 +359,7 @@ main > *:not(.grid) div.content > section {
 }
 @media screen and (min-width: 750px) {
   main > .grid div.content {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
     grid-column-gap: 3vw;
@@ -333,6 +368,7 @@ main > *:not(.grid) div.content > section {
 }
 @media screen and (max-width: 750px) and (orientation: landscape) {
   main > .grid div.content {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
     grid-column-gap: 3vw;
@@ -347,20 +383,28 @@ main > *:not(.grid) div.content > section {
   }
 }
 main > .grid div.content > section {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: box;
   display: flex;
+  -webkit-box-pack: center;
   -o-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   -o-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 @media screen and (max-width: 1100px) {
   main > .grid div.content > section {
+    -webkit-box-flex: 1;
     -o-box-flex: 1;
     box-flex: 1;
+    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     margin-top: 1.5vw;
     margin-bottom: 1.5vw;
     min-height: 20vw;
@@ -378,7 +422,8 @@ main > .grid div.content > section {
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   main > .grid div.content > section {
-    flex-basis: 20%;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
     min-height: 20vw;
   }
 }
@@ -397,26 +442,39 @@ main > .grid.filled div.content > section {
 }
 main > .grid div.content > section > div,
 main > .grid div.content > section > a {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: box;
   display: flex;
   padding: 3vw;
-  align-self: stretch;
+  -webkit-align-self: stretch;
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
   -ms-flex-item-align: stretch;
+  -webkit-box-pack: center;
   -o-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   -o-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
   -o-box-orient: vertical;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-flex: 1;
   -o-box-flex: 1;
   box-flex: 1;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 @media screen and (max-width: 1100px) {
   main > .grid div.content > section > div,
   main > .grid div.content > section > a {
+    -webkit-box-align: start;
     -o-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
 }
@@ -427,11 +485,16 @@ main > .grid.links div.content > section:hover {
   background-color: rgba(255,255,255,0.5);
 }
 main > .grid.fancy div.content > section {
+  -webkit-box-pack: start;
   -o-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: end;
   -o-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 @media screen and (max-width: 1100px) {
   main > .grid.fancy.links div.content > section {
@@ -443,21 +506,33 @@ main > .grid.fancy.filled div.content > section {
 }
 @media screen and (min-width: 1100px) {
   main > .grid.fancy div.content > section:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
     grid-row: 1/3;
   }
 }
 @media screen and (min-width: 1100px) {
   main > .grid.fancy div.content > section:nth-child(10) {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
     grid-column: 5/7;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
     grid-row: 1/4;
   }
 }
 main > .grid.fancy div.content > section > div,
 main > .grid.fancy div.content > section > a {
+  -webkit-box-pack: start;
   -o-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: start;
   -o-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 @media screen and (max-width: 1100px) {
@@ -469,7 +544,9 @@ main > .grid.fancy div.content > section > a {
 @media screen and (min-width: 1100px) {
   main > .grid.fancy div.content > section > div,
   main > .grid.fancy div.content > section > a {
+    -webkit-box-pack: end;
     -o-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
@@ -490,25 +567,31 @@ main > .grid.fancy div.content > section > a {
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .grid div.content {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: box;
     display: flex;
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
     -o-box-lines: multiple;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-flex: 1;
     -o-box-flex: 1;
     box-flex: 1;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
   }
   .grid div.content > section {
-    flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
     margin: 0.3vw;
   }
   .grid div.content > section > *:first-child {
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
     -o-box-lines: multiple;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 10%;
     width: 80%;
@@ -516,7 +599,8 @@ main > .grid.fancy div.content > section > a {
 }
 main > .copy div.content > section {
   max-width: 90%;
-  flex-basis: 90%;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
 }
 @media screen and (min-width: 1100px) and (max-width: 1500px) {
   main > .copy div.content > section {
@@ -592,12 +676,17 @@ main > .copyMulti {
   padding: 0 !important;
   margin: 0;
   overflow: hidden;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: box;
   display: flex;
+  -webkit-box-pack: center;
   -o-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   -o-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 @media screen and (max-width: 750px) and (orientation: landscape) {
@@ -612,20 +701,29 @@ main > .copyMulti {
 #mNav nav,
 #cNav nav,
 #dNav nav {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: box;
   display: flex;
+  -webkit-box-pack: justify;
   -o-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: end;
   -o-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
+  -webkit-box-flex: 1;
   -o-box-flex: 1;
   box-flex: 1;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 #mNav nav {
   padding: 0 5vw;
+  -webkit-box-align: center;
   -o-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 @media screen and (max-width: 750px) and (orientation: landscape) {
@@ -642,7 +740,9 @@ main > .copyMulti {
 }
 #cNav nav {
   padding: 1.5vw;
+  -webkit-box-align: center;
   -o-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 #dNav nav {
@@ -691,7 +791,8 @@ div.mblnavContainer {
 .open {
   opacity: 1 !important;
   -ms-filter: none !important;
-  filter: none !important;
+  -webkit-filter: none !important;
+          filter: none !important;
 }
 div.mblnavSection {
   padding: 5vw;
@@ -709,9 +810,13 @@ div.mblnavSection {
 }
 main > * > div.picturefill-background div.content {
   min-height: 60vh;
+  -webkit-box-pack: center;
   -o-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
   -o-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -721,19 +826,29 @@ main > * > div.picturefill-background div.content {
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   main > * > div.picturefill-background div.content {
+    -webkit-box-pack: center;
     -o-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: start;
     -o-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-orient: vertical;
     -o-box-orient: vertical;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 @media screen and (min-width: 1100px) {
   main > * > div.picturefill-background div.content {
+    -webkit-box-pack: end;
     -o-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
     -o-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 }
@@ -756,18 +871,24 @@ main .full div.content {
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   main > * > div.picturefill-background.full div.content,
   main .full div.content {
+    -webkit-box-align: start;
     -o-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
 }
 main > * > div.picturefill-background.top div.content {
+  -webkit-box-align: start;
   -o-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   main > * > div.picturefill-background div.content section {
+    -webkit-box-flex: 1;
     -o-box-flex: 1;
     box-flex: 1;
+    -ms-flex: 0 0 80% !important;
     flex: 0 0 80% !important;
   }
 }
@@ -785,16 +906,22 @@ main > * > div.imageBlocks section {
   }
 }
 main > * > div.imageBlocks section {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: box;
   display: flex;
+  -webkit-box-orient: vertical;
   -o-box-orient: vertical;
+  -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-lines: multiple;
   -moz-box-lines: multiple;
   -o-box-lines: multiple;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: start;
   -o-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 @media screen and (max-width: 750px) {
@@ -1142,12 +1269,17 @@ nav a {
 * elements 
 */
 div.logo {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: box;
   display: flex;
+  -webkit-box-pack: start;
   -o-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
   -o-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   overflow: hidden;
   width: 40vw;
@@ -1273,6 +1405,14 @@ a#toTop {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
+.linkIcon {
+  color: #f00;
+  font-size: 0.8em;
+  position: absolute;
+  margin-top: 0.4em;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 .pbVideo {
   position: relative;
   padding-bottom: 56.25%;
@@ -1307,7 +1447,8 @@ div#vidHolder {
 video.hidden-xs {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (min-width: 1100px) {
   video.hidden-xs {
@@ -1349,10 +1490,13 @@ nav li {
   padding: 0;
 }
 nav ul {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: box;
   display: flex;
+  -webkit-box-pack: justify;
   -o-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0;
 }
@@ -1360,7 +1504,9 @@ nav li {
   padding: 0 1.5vw;
 }
 footer nav ul {
+  -webkit-box-orient: vertical;
   -o-box-orient: vertical;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 4vh;
 }
@@ -1410,19 +1556,23 @@ ul.iconList li {
 .lighten1 {
   background-color: rgba(255,255,255,0.75);
   background-blend-mode: overlay;
-  filter: grayscale(80%);
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
 }
 .lighten2 {
   background-color: rgba(255,255,255,0.85);
   background-blend-mode: overlay;
-  filter: grayscale(80%);
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
 }
 .gradient1 {
   background-blend-mode: multiply;
+  background: -webkit-gradient(linear, left bottom, right top, from(#eb0a0a), color-stop(rgba(0,0,0,0.5)), color-stop(rgba(0,0,0,0.25)), to(rgba(0,0,0,0.1)));
   background: linear-gradient(to top right, #eb0a0a, rgba(0,0,0,0.5), rgba(0,0,0,0.25), rgba(0,0,0,0.1));
 }
 .gradient2 {
   background-blend-mode: multiply;
+  background: -webkit-gradient(linear, left bottom, right top, from(#0a0a0a), color-stop(rgba(0,0,0,0.25)), to(rgba(0,0,0,0.1)));
   background: linear-gradient(to top right, #0a0a0a, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
 }
 @media screen and (min-width: 750px) {
