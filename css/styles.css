@@ -1,83 +1,65 @@
 /*
 * generated using stylus - don't alter
 */
+/**
+* @license
+*
+* Font Family: Satoshi
+* Designed by: Deni Anggara
+* URL: https://www.fontshare.com/fonts/satoshi
+* © 2024 Indian Type Foundry
+*
+* Satoshi Light 
+* Satoshi LightItalic 
+* Satoshi Regular 
+* Satoshi Italic 
+* Satoshi Medium 
+* Satoshi MediumItalic 
+* Satoshi Bold 
+* Satoshi BoldItalic 
+* Satoshi Black 
+* Satoshi BlackItalic 
+* Satoshi Variable (Variable font)
+* Satoshi VariableItalic (Variable font)
 
+*
+*/
 
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-Regular.woff2?v=3.12") format("woff2"),
-       url("../fonts/inter/Inter-Regular.woff?v=3.12") format("woff");
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-ExtraBold.woff2?v=3.12") format("woff2"),
-       url("../fonts/inter/Inter-ExtraBold.woff?v=3.12") format("woff");
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-Black.woff2?v=3.12") format("woff2"),
-       url("../fonts/inter/Inter-Black.woff?v=3.12") format("woff");
-}
-
-
-/* -------------------------------------------------------
-Variable font.
-Usage:
-
-  html { font-family: 'Inter', sans-serif; }
-  @supports (font-variation-settings: normal) {
-    html { font-family: 'Inter var', sans-serif; }
-  }
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 300.0 to 900.0
 */
 @font-face {
-  font-family: 'Inter var';
-  font-weight: 100 900;
+  font-family: 'Satoshi-VR';
+  src: url('/fonts/satoshi/fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('/fonts/satoshi/fonts/Satoshi-Variable.woff') format('woff'),
+       url('/fonts/satoshi/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
   font-display: swap;
   font-style: normal;
-  font-named-instance: 'Regular';
-  src: url("../fonts/inter/Inter-roman.var.woff2?v=3.12") format("woff2");
 }
-@font-face {
-  font-family: 'Inter var';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-  font-named-instance: 'Italic';
-  src: url("../fonts/inter/Inter-italic.var.woff2?v=3.12") format("woff2");
-}
-
-
-/* --------------------------------------------------------------------------
-[EXPERIMENTAL] Multi-axis, single variable font.
-
-Slant axis is not yet widely supported (as of February 2019) and thus this
-multi-axis single variable font is opt-in rather than the default.
-
-When using this, you will probably need to set font-variation-settings
-explicitly, e.g.
-
-  * { font-variation-settings: "slnt" 0deg }
-  .italic { font-variation-settings: "slnt" 10deg }
-
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 300.0 to 900.0
 */
 @font-face {
-  font-family: 'Inter var experimental';
-  font-weight: 100 900;
+  font-family: 'Satoshi-VR';
+  src: url('/fonts/satoshi/fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+       url('/fonts/satoshi/fonts/Satoshi-VariableItalic.woff') format('woff'),
+       url('/fonts/satoshi/fonts/Satoshi-VariableItalic.ttf') format('truetype');
+  font-weight: 300 900;
   font-display: swap;
-  font-style: oblique 0deg 10deg;
-  src: url("../fonts/inter/Inter.var.woff2?v=3.12") format("woff2");
+  font-style: italic;
 }
+
 
 /*
 *
@@ -91,74 +73,201 @@ explicitly, e.g.
 *
 *
 */
+.brand0color {
+  color: #1a1a1a;
+}
+.brand1color {
+  color: #1a1a1a;
+}
+.brand2color {
+  color: #000;
+}
+.brand3color {
+  color: #f00;
+}
+.brand4color {
+  color: #ebeae8;
+}
+.brand5color {
+  color: #000;
+}
+.brand6color {
+  color: #000;
+}
+.brand0 {
+  background-color: #1a1a1a;
+}
+.brand1 {
+  background-color: #1a1a1a;
+}
+.brand2 {
+  background-color: #000;
+}
+.brand3 {
+  background-color: #f00;
+}
+.brand4 {
+  background-color: #ebeae8;
+}
+.brand5 {
+  background-color: #000;
+}
+.brand6 {
+  background-color: #000;
+}
 html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-@supports (font-variation-settings: normal) {
-  html,
-  body {
-    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  }
+  font-family: "Satoshi-VR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 body {
-  background-color: #f5f5f5;
-  color: #0a0a0a;
+  font-size: 16px;
+}
+body {
+  background-color: #fff;
+  color: #1a1a1a;
 }
 hr {
   border: none;
   border-bottom: 1px solid #dedede;
+}
+hr.small {
+  border-bottom: 3px solid #000 !important;
+  width: 100px;
+}
+.reverse hr {
+  border-bottom: 2px solid #1a1a1a;
+}
+.noPad {
+  padding: 0 !important;
+}
+.nowrap {
+  text-wrap: nowrap;
+}
+.noPadBottom {
+  padding-bottom: 0 !important;
+}
+.noPadTop {
+  padding-top: 0 !important;
+}
+.noPadRight {
+  padding-right: 0 !important;
+}
+.noPadLeft {
+  padding-left: 0 !important;
+}
+.bgPosBottom {
+  background-position: -1px 100%;
+}
+.redacted {
+  background-color: rgba(255,255,255,0.5);
+  display: inline;
+  padding-right: 1vw;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  line-height: 150%;
+}
+span.spacer {
+  display: block;
+}
+span.spacer5 {
+  height: 5vh;
+}
+span.spacer7 {
+  height: 7vh;
+}
+span.spacer10 {
+  height: 10vh;
+}
+span.spacer15 {
+  height: 15vh;
+}
+span.spacer20 {
+  height: 20vh;
+}
+span.spacer25 {
+  height: 25vh;
+}
+@media screen and (max-width: 750px) {
+  span.spacer7 {
+    height: 7vw;
+  }
+  span.spacer10 {
+    height: 10vw;
+  }
+}
+.centerMe {
+  margin: 0px auto;
+}
+.padMe {
+  padding: 0.9vw;
+}
+@media screen and (max-width: 750px) {
+  .padMe {
+    padding: 3vw;
+  }
+}
+.alignEnd {
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  -ms-flex-item-align: end;
 }
 /* 
 * forms 
 */
 input {
   border-radius: 5px;
-  border-color: #0a0a0a;
+  border-color: #1a1a1a;
 }
 /* 
 * layout 
 */
-body > main,
-body > footer {
-  padding: 0 5vw 3vw 5vw;
-}
 @media screen and (min-width: 1100px) {
-  body > main,
-  body > footer {
-    padding: 0 0.65vw 0.65vw 0.65vw;
+  body > main > header,
+  body > main > article {
+    padding: 0.9vw 7.5vw 0.9vw 7.5vw;
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  body > main,
-  body > footer {
+  body > main > header,
+  body > main > article {
     display: block;
   }
 }
-main > * {
-  margin-bottom: 3vw;
+main > *:nth-child(1) {
+  background-color: #ebeae8;
 }
 @media screen and (min-width: 1100px) {
-  main > * {
-    margin-bottom: 0.65vw;
+  main > *:nth-child(1) {
+    padding: 0.9vw 7.5vw 0.9vw 7.5vw;
   }
 }
-@media screen and (max-width: 1100px) {
-  main > header.copy {
-    padding-top: 10vw;
+main > *:nth-child(2) {
+  background-color: #ebeae8;
+}
+@media screen and (min-width: 1100px) {
+  main > *:nth-child(2) {
+    padding: 0.9vw 7.5vw 0.9vw 7.5vw;
   }
 }
 @media screen and (min-width: 1100px) {
-  main > header.copy {
-    border-top: 2px solid #0a0a0a;
+  body > main > article:last-of-type {
+    padding-bottom: 5vw;
   }
 }
 body > footer {
-  background-color: rgba(255,255,255,0.75);
-  padding-top: 3vw;
-  padding-bottom: 10vw;
+  border-top: 1px solid #fff;
+  padding: 10vw 3vw;
+}
+@media screen and (min-width: 1100px) {
+  body > footer {
+    padding: 3vw 7.5vw;
+  }
+}
+body > footer {
+  background-color: #ebeae8;
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   body > footer div.content {
@@ -167,6 +276,11 @@ body > footer {
     -o-box-lines: multiple;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  body > footer div.content > section {
+    margin-bottom: 10vw;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
@@ -188,6 +302,9 @@ body > footer {
 }
 @media screen and (min-width: 1100px) {
   body > footer div.content {
+    -webkit-column-gap: 3vw;
+    -moz-column-gap: 3vw;
+    column-gap: 3vw;
     -webkit-box-pack: start;
     -o-box-pack: start;
     -ms-flex-pack: start;
@@ -199,21 +316,13 @@ body > footer {
     -webkit-box-flex: 1;
     -o-box-flex: 1;
     box-flex: 1;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -ms-flex-preferred-size: 22%;
-        flex-basis: 22%;
-    padding-right: 3%;
+    -ms-flex: 1 1 20%;
+    flex: 1 1 20%;
   }
 }
 @media screen and (min-width: 1100px) {
   body > footer div.content > section:last-child {
     margin-left: auto;
-  }
-}
-@media screen and (max-width: 1100px) {
-  body > footer div.logo {
-    display: none;
   }
 }
 footer div > header {
@@ -252,9 +361,13 @@ div.content {
   -o-box-orient: vertical;
   -ms-flex-direction: column;
   flex-direction: column;
+  padding: 1vw 0 0 0;
 }
 @media screen and (min-width: 750px) {
   div.content {
+    -webkit-column-gap: 1vw;
+    -moz-column-gap: 1vw;
+    column-gap: 1vw;
     -webkit-box-orient: horizontal;
     -o-box-orient: horizontal;
     -ms-flex-direction: row;
@@ -294,15 +407,14 @@ footer section {
   main div > header,
   footer header,
   footer section {
-    padding: 0.65vw 1.5vw 0.65vw 1.5vw;
+    padding: 0.9vw 1.5vw 0.9vw 1.5vw;
   }
 }
 main > *:not(.grid) div.content > section {
-  padding: 0.65vw 3vw 0.65vw 3vw;
+  padding: 0.9vw 3vw 0.9vw 3vw;
 }
 @media screen and (min-width: 1100px) {
   main > *:not(.grid) div.content > section {
-    margin-right: 0.65vw;
     padding-right: 5vw;
   }
 }
@@ -315,12 +427,7 @@ main > *:not(.grid) div.content > section {
     flex: 0 1 auto;
     -ms-flex-preferred-size: 46%;
         flex-basis: 46%;
-    padding: 0.65vw 1.5vw 0.65vw 1.5vw;
-  }
-}
-@media screen and (min-width: 1100px) {
-  main > *:not(.grid) div.content > section:last-child {
-    margin-right: 0;
+    padding: 0.9vw 1.5vw 0.9vw 1.5vw;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
@@ -353,7 +460,7 @@ main > *:not(.grid) div.content > section {
     -o-box-lines: multiple;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-left: 0.65vw;
+    padding-left: 0.9vw;
     padding-right: paXS;
   }
 }
@@ -363,7 +470,7 @@ main > *:not(.grid) div.content > section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
     grid-column-gap: 3vw;
-    grid-row-gap: 0.65vw;
+    grid-row-gap: 0.9vw;
   }
 }
 @media screen and (max-width: 750px) and (orientation: landscape) {
@@ -372,14 +479,14 @@ main > *:not(.grid) div.content > section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
     grid-column-gap: 3vw;
-    grid-row-gap: 0.65vw;
+    grid-row-gap: 0.9vw;
   }
 }
 @media screen and (min-width: 1100px) {
   main > .grid div.content {
     grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
-    grid-column-gap: 0.65vw;
-    grid-row-gap: 0.65vw;
+    grid-column-gap: 0.9vw;
+    grid-row-gap: 0.9vw;
   }
 }
 main > .grid div.content > section {
@@ -602,40 +709,23 @@ main > .copy div.content > section {
   -ms-flex-preferred-size: 90%;
       flex-basis: 90%;
 }
-@media screen and (min-width: 1100px) and (max-width: 1500px) {
+@media screen and (min-width: 750px) and (max-width: 1100px) {
+  main > .copy div.content > section {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+@media screen and (min-width: 1100px) {
   main > .copy div.content > section {
     padding-left: 22vw;
     padding-right: 22vw;
   }
 }
-@media screen and (min-width: 1500px) {
-  main > .copy div.content > section {
-    padding-left: 28vw;
-    padding-right: 28vw;
-  }
-}
-main > .copy div.content > section,
-main > .copyMulti {
-  padding-top: 4.5vw;
-  padding-bottom: 3vw;
-}
-@media screen and (min-width: 1100px) {
-  main > .copy div.content > section,
-  main > .copyMulti {
-    padding-top: 6.75vw;
-    padding-bottom: 6.75vw;
-  }
-}
-@media screen and (max-width: 1100px) {
-  main > .copyMulti section {
-    padding-bottom: 10vw !important;
-  }
-}
 #alert {
-  padding: 0.65vw 0.65vw 0 0.65vw;
+  padding: 0.9vw 0.9vw 0 0.9vw;
 }
 #alert div.content {
-  border-bottom: 4px solid #0a0a0a;
+  border-bottom: 4px solid #1a1a1a;
 }
 @media screen and (max-width: 1100px) {
   #alert div.content {
@@ -650,7 +740,7 @@ main > .copyMulti {
 }
 @media screen and (min-width: 1100px) {
   #alert div.content > section {
-    padding: 1.5vw 0.975vw 1.5vw 1.5vw;
+    padding: 1.5vw 1.35vw 1.5vw 1.5vw;
     max-width: 95%;
   }
 }
@@ -669,7 +759,7 @@ main > .copyMulti {
   }
 }
 #mNav {
-  background-color: #fff;
+  background-color: #ebeae8;
   height: 10vh;
   width: 100vw;
   position: fixed;
@@ -696,7 +786,8 @@ main > .copyMulti {
 }
 #cNav,
 #dNav {
-  padding: 0 0.65vw;
+  padding: 0.3vw 3vw;
+  background-color: #ebeae8;
 }
 #mNav nav,
 #cNav nav,
@@ -746,7 +837,7 @@ main > .copyMulti {
   align-items: center;
 }
 #dNav nav {
-  padding: 3vw 1.5vw;
+  padding: 1.5vw;
 }
 @media screen and (max-width: 1100px) {
   div#dNav,
@@ -775,7 +866,7 @@ div.mblnav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ebeae8;
 }
 div.mblnavContainer {
   position: absolute;
@@ -958,132 +1049,166 @@ main > * > div.picturefill-background div.content {
 main > * > div.imageBlocks section > a.cta {
   margin-top: auto;
 }
+.simpleFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 /* 
 * typography 
 */
-html,
-body {
-  font-weight: 350;
-  font-size: 16px;
-}
 a:link,
 a:visited {
   text-decoration: underline;
 }
+a.icon {
+  text-decoration: none;
+}
 a:link,
-span,
 .rev a:link,
 .rev span,
 .mblnav a:link,
 .mblnav a:visited {
-  color: #eb0a0a;
+  color: #1a1a1a;
 }
 a:visited,
 .rev a:visited {
-  color: #eb0a0a;
+  color: #f00;
 }
 a:hover,
 a:active {
   text-decoration: none;
 }
-nav a:link,
-nav a:visited {
-  color: #0a0a0a;
+ul a:link,
+ul a:visited {
+  color: #1a1a1a;
   text-decoration: none;
+  font-weight: 600;
+  padding: 0.9vw 0 0 0;
+  letter-spacing: 0;
+  display: inline-block;
 }
-nav a:link:hover,
-nav a:visited:hover,
 nav a:link.activeLink,
 nav a:visited.activeLink {
-  color: #eb0a0a;
+  padding-bottom: 0.63vw;
+  color: #f00;
+  border-bottom: 3px solid #f00;
+}
+footer nav li {
+  margin-bottom: 0.5em;
+}
+footer nav a:link.activeLink {
+  margin-bottom: 1em;
+}
+nav ul a:not(.activeLink):link::after,
+nav ul a:not(.activeLink):visited::after {
+  content: "";
+  display: block;
+  width: 0;
+  border-bottom: 3px solid #1a1a1a;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  padding: 0 0 0.63vw 0;
+}
+nav ul a:not(.activeLink):hover::after {
+  width: 100%;
 }
 p,
 li,
 a,
 td {
-  color: #0a0a0a;
+  color: #1a1a1a;
   line-height: 145%;
-  letter-spacing: -0.03rem;
-}
-p {
-  max-width: 90%;
+  letter-spacing: -0.01em;
 }
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  color: #0a0a0a;
+h6 {
   margin: 0;
-  margin-bottom: 0.1rem;
-  max-width: 95%;
+  margin-bottom: 0.9vw;
 }
 h1,
 .h1 {
-  letter-spacing: -0.1rem;
-  line-height: 110%;
+  font-weight: 700;
+  font-size: 4.6em;
+  line-height: 1em;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5vw;
+}
+@media screen and (max-width: 750px) {
+  h1,
+  .h1 {
+    font-size: 11vw;
+    margin-bottom: 10vw;
+  }
 }
 h2,
 .h2 {
-  letter-spacing: -0.075rem;
-  line-height: 110%;
+  font-weight: 600;
+  font-size: 3em;
+  line-height: 1.05em;
+  letter-spacing: -0.02em;
 }
-h3,
-.h3,
-h4,
-.h4 {
-  letter-spacing: -0.06rem;
-  line-height: 125%;
-}
-h5,
-.h5,
-h6,
-.h6 {
-  letter-spacing: -0.04rem;
-  line-height: 140%;
-}
-h1,
-.h1,
-h2,
-.h2,
 h3,
 .h3 {
-  font-weight: 800;
+  font-weight: 500;
+  font-size: 2.2em;
+  line-height: 115%;
+  letter-spacing: -0.01em;
 }
 h4,
-.h4,
+.h4 {
+  font-weight: 500;
+  font-size: 1.6em;
+  line-height: 130%;
+}
+h4 span {
+  font-weight: 400;
+}
 h5,
-.h5,
+.h5 {
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 125%;
+  margin-bottom: 0;
+}
+h5 span {
+  font-weight: 400;
+}
 h6,
 .h6 {
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 130%;
+  max-width: 90%;
+}
+p {
+  font-weight: 400;
+  font-size: 1.15em;
+  line-height: 1.4em;
+  margin-top: 0em;
+}
+strong {
   font-weight: 600;
 }
-h1 strong,
-.h1 strong,
-h2 strong,
-.h2 strong,
-h3 strong,
-.h3 strong,
-h5 strong,
-.h5 strong {
-  font-weight: 300;
-}
-h4 strong,
-.h4 strong,
-h6 strong,
-.h6 strong {
-  font-weight: 300;
-}
-p a,
-nav a {
-  font-weight: 500;
+.small {
+  font-size: 90%;
 }
 .rev h1,
 .rev h2,
@@ -1106,165 +1231,6 @@ nav a {
 .huge {
   letter-spacing: -0.06em;
 }
-@media screen and (max-width: 750px) {
-  p,
-  li,
-  a,
-  td {
-    font-size: 1rem;
-  }
-  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-  h1,
-  .h1,
-  h2,
-  .h2 {
-    font-size: 1.6rem;
-  }
-  h3,
-  .h3 {
-    font-size: 1.3rem;
-  }
-  h4,
-  .h4 {
-    font-size: 1.2rem;
-  }
-  h5,
-  .h5 {
-    font-size: 1.1rem;
-  }
-  h6,
-  .h6 {
-    font-size: 1rem;
-  }
-  .huge {
-    font-size: 2.4rem;
-  }
-}
-@media screen and (min-width: 750px) and (max-width: 1100px) {
-  p,
-  li,
-  a,
-  td {
-    font-size: 1rem;
-  }
-  h1,
-  .h1 {
-    font-size: 2.6rem;
-  }
-  h2,
-  .h2 {
-    font-size: 2.2rem;
-  }
-  h3,
-  .h3 {
-    font-size: 1.6rem;
-  }
-  h4,
-  .h4 {
-    font-size: 1.3rem;
-  }
-  h5,
-  .h5 {
-    font-size: 1.15rem;
-  }
-  h6,
-  .h6 {
-    font-size: 1.1rem;
-  }
-  .huge {
-    font-size: 3.5rem;
-  }
-  .small {
-    font-size: 90%;
-  }
-}
-@media screen and (min-width: 1100px) and (max-width: 1500px) {
-  p,
-  li,
-  a,
-  td {
-    font-size: 1rem;
-  }
-  h1,
-  .h1 {
-    font-size: 3.2rem;
-    line-height: 100%;
-  }
-  h2,
-  .h2 {
-    font-size: 2.3rem;
-  }
-  h3,
-  .h3 {
-    font-size: 1.6rem;
-  }
-  h4,
-  .h4 {
-    font-size: 1.3rem;
-  }
-  h5,
-  .h5 {
-    font-size: 1.1rem;
-  }
-  h6,
-  .h6 {
-    font-size: 1rem;
-  }
-  .huge {
-    font-size: 4.5rem;
-  }
-  .small {
-    font-size: 85%;
-  }
-  nav a {
-    font-size: 0.95rem;
-  }
-}
-@media screen and (min-width: 1500px) {
-  p,
-  li,
-  a,
-  td {
-    font-size: 1rem;
-  }
-  h1,
-  .h1 {
-    font-size: 3.4rem;
-    line-height: 105%;
-  }
-  h2,
-  .h2 {
-    font-size: 2.5rem;
-  }
-  h3,
-  .h3 {
-    font-size: 1.8rem;
-  }
-  h4,
-  .h4 {
-    font-size: 1.35rem;
-  }
-  h5,
-  .h5 {
-    font-size: 1.15rem;
-  }
-  h6,
-  .h6 {
-    font-size: 1rem;
-  }
-  .huge {
-    font-size: 5rem;
-  }
-  .small {
-    font-size: 85%;
-  }
-  nav a {
-    font-size: 0.95rem;
-  }
-}
 /* 
 * elements 
 */
@@ -1282,33 +1248,7 @@ div.logo {
   -ms-flex-align: center;
   align-items: center;
   overflow: hidden;
-  width: 40vw;
-}
-@media screen and (max-width: 750px) {
-  div.logo {
-    width: 12vw;
-  }
-}
-@media screen and (min-width: 750px) and (max-width: 1100px) {
-  div.logo {
-    width: 8vw;
-  }
-}
-@media screen and (min-width: 1100px) and (max-width: 1500px) {
-  div.logo {
-    width: 3.4vw;
-  }
-}
-@media screen and (min-width: 1500px) {
-  div.logo {
-    width: 3vw;
-  }
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  div.logo {
-    height: 50px;
-    width: 55px;
-  }
+  width: 60px;
 }
 div.logo svg {
   display: block;
@@ -1323,27 +1263,28 @@ div.logo svg {
 }
 @media screen and (max-width: 750px) {
   #mNav div.logo {
-    width: 8vw;
+    width: 48px;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   #mNav div.logo {
-    width: 5vw;
+    width: 60px;
   }
 }
 #mNav div.logo svg {
   max-height: 9vh;
 }
-@media screen and (min-width: 1100px) and (max-width: 1500px) {
+#cNav div.logo {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1100px) and (max-width: 2100px) {
   #cNav div.logo {
     margin-top: 0.3vw;
-    width: 2.4vw;
   }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 2100px) {
   #cNav div.logo {
     margin-top: 0.3vw;
-    width: 2.4vw;
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -1355,21 +1296,21 @@ div.logo svg {
 .cta {
   display: inline-block;
   padding: 0.75em 2.5em 0.7em 1em;
-  margin: 0.65vw 0;
+  margin: 0.9vw 0;
   font-weight: 700 !important;
   background-color: #fff;
-  color: #0a0a0a;
+  color: #1a1a1a;
   position: relative;
 }
 a.cta:link,
 a.cta:visited {
-  color: #0a0a0a;
+  color: #1a1a1a;
   text-decoration: none;
 }
 a.cta:hover,
 a.cta:active {
   color: #fff;
-  background-color: #eb0a0a;
+  background-color: #f00;
 }
 a.cta:hover::after {
   content: '>';
@@ -1378,17 +1319,54 @@ a.cta:hover::after {
   top: 0.7em;
 }
 .rev .cta {
-  background-color: #fff;
-  color: #0a0a0a;
+  background-color: rgba(255,255,255,0.5);
+  color: #1a1a1a;
 }
 .rev a.cta:link,
 .rev a.cta:visited {
-  color: #0a0a0a;
+  color: #1a1a1a;
 }
 .rev a.cta:hover,
 .rev a.cta:active {
   color: #fff;
-  background-color: #eb0a0a;
+  background-color: #f00;
+}
+.ctaButton,
+a.ctaButton {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  letter-spacing: 0;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 0.9vw 0.9vw 0 0.9vw !important;
+  border-bottom: 3px solid rgba(0,0,0,0);
+}
+.ctaButton:hover,
+a.ctaButton:hover {
+  display: block;
+  border-radius: 0;
+  background-color: rgba(0,0,0,0) !important;
+}
+.ctaButton:link::after,
+.ctaButton:visited::after {
+  content: "";
+  display: block;
+  width: 0;
+  border-bottom: 3px solid #1a1a1a;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  padding: 0 0 0.63vw 0;
+}
+.ctaButton:hover::after {
+  width: 100%;
+}
+.ctaBtn {
+  display: inline-block;
 }
 .icon {
   background-color: rgba(255,255,255,0.05);
@@ -1463,10 +1441,10 @@ video.hidden-xs {
 }
 ul,
 ol {
-  border-top: 1px solid #0a0a0a;
-  border-bottom: 2px solid #0a0a0a;
-  padding: 0.3em 0.5em 0.5em 0em;
-  margin-bottom: 4vh;
+  border-bottom: 3px solid #1a1a1a;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 0;
+  margin: 1em 0;
 }
 .rev ul,
 .rev ol {
@@ -1475,8 +1453,8 @@ ol {
 }
 li {
   list-style-type: none;
-  padding: 0.7em 3em 0.7em 0.5em;
-  border-bottom: 1px solid #0a0a0a;
+  padding: 1em 1em 1em 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .rev li {
   border-bottom: 1px solid #dedede;
@@ -1501,28 +1479,24 @@ nav ul {
   margin: 0;
 }
 nav li {
-  padding: 0 1.5vw;
+  padding: 0 1.08vw;
 }
 footer nav ul {
   -webkit-box-orient: vertical;
   -o-box-orient: vertical;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 4vh;
-}
-footer nav li {
-  padding: 1em 0;
 }
 ul.iconList {
   border: none;
 }
 ul.iconList li {
-  padding: 0.1em 1em 0.3em 0;
-  font-size: 97%;
+  padding: 0.1em 1em 0.1em 0;
+  font-size: 1.2em;
   border: none;
 }
 .content hr {
-  border-bottom: 2px solid #0a0a0a;
+  border-bottom: 2px solid #1a1a1a;
 }
 /* effects */
 .multiply {
@@ -1542,16 +1516,16 @@ ul.iconList li {
   background-color: rgba(0,0,0,0.75);
 }
 .multiply3 {
-  background-color: #0a0aeb;
+  background-color: brand3Alp;
 }
 .multiply4 {
-  background-color: rgba(235,10,10,0.9);
+  background-color: brand3edit;
 }
 .multiply5 {
-  background-color: rgba(5,5,15,0.9);
+  background-color: brand1edit;
 }
 .multiply6 {
-  background-color: rgba(235,10,10,0.7);
+  background-color: brand3edit1;
 }
 .lighten1 {
   background-color: rgba(255,255,255,0.75);
@@ -1567,13 +1541,13 @@ ul.iconList li {
 }
 .gradient1 {
   background-blend-mode: multiply;
-  background: -webkit-gradient(linear, left bottom, right top, from(#eb0a0a), color-stop(rgba(0,0,0,0.5)), color-stop(rgba(0,0,0,0.25)), to(rgba(0,0,0,0.1)));
-  background: linear-gradient(to top right, #eb0a0a, rgba(0,0,0,0.5), rgba(0,0,0,0.25), rgba(0,0,0,0.1));
+  background: -webkit-gradient(linear, left bottom, right top, from(#f00), color-stop(rgba(0,0,0,0.5)), color-stop(rgba(0,0,0,0.25)), to(rgba(0,0,0,0.1)));
+  background: linear-gradient(to top right, #f00, rgba(0,0,0,0.5), rgba(0,0,0,0.25), rgba(0,0,0,0.1));
 }
 .gradient2 {
   background-blend-mode: multiply;
-  background: -webkit-gradient(linear, left bottom, right top, from(#0a0a0a), color-stop(rgba(0,0,0,0.25)), to(rgba(0,0,0,0.1)));
-  background: linear-gradient(to top right, #0a0a0a, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
+  background: -webkit-gradient(linear, left bottom, right top, from(#1a1a1a), color-stop(rgba(0,0,0,0.25)), to(rgba(0,0,0,0.1)));
+  background: linear-gradient(to top right, #1a1a1a, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
 }
 @media screen and (min-width: 750px) {
   .m {
