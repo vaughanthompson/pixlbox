@@ -9,17 +9,7 @@ div.logo
     align-items: center
     overflow: hidden
     width: logoDimens
-    @media phoneRule
-        width: logoDimens*0.3
-    @media tabletRule
-        width: logoDimens*0.2
-    @media desktopRule
-        width: logoDimens*0.085
-    @media lgdesktopRule
-        width: logoDimens*0.075
-    @media ie
-        height:50px
-        width:55px
+
 div.logo svg
     display: block
     width: 100%
@@ -30,18 +20,17 @@ div.logo svg
 
 #mNav div.logo 
     @media phoneRule
-        width: logoDimens*0.20
+        width: logoDimens*0.8
     @media tabletRule
-        width: logoDimens*0.125
+        width: logoDimens
 #mNav div.logo svg
     max-height: navSpacer*0.9
 #cNav div.logo
+    margin-bottom: 10px
     @media desktopRule
         margin-top: marXXS
-        width: logoDimens*0.06
     @media lgdesktopRule
         margin-top: marXXS
-        width: logoDimens*0.06
      @media ie
         height:50px
         width:55px
@@ -67,7 +56,7 @@ a.cta:hover::after
     right: 0.75em
     top: 0.70em
 .rev .cta
-    background-color: white
+    background-color: whiteAlp50
     color: brand1
  .rev a.cta:link, .rev a.cta:visited
     color: brand1
@@ -76,6 +65,37 @@ a.cta:hover::after
     background-color: brand3
 
 
+.ctaButton, a.ctaButton
+    color: brand1
+    text-decoration: none
+    font-weight: 600
+    font-size: 1.1em
+    letter-spacing: 0 
+    display: inline-block
+    background-color: blackAlp5
+    border-radius: 5px
+    transition: 0.3s
+    padding: padXS padXS 0 padXS !important 
+    border-bottom: 3px solid rgba(0,0,0,0.0) 
+.ctaButton:hover, a.ctaButton:hover
+    display: block
+    border-radius: 0
+    background-color: rgba(0,0,0,0.0) !important
+
+.ctaButton:link::after, 
+.ctaButton:visited::after 
+    content: ""
+    display: block
+    width: 0
+    border-bottom: 3px solid brand1
+    transition: width 0.3s
+    padding: 0 0 padXS*0.7 0
+
+.ctaButton:hover::after
+    width: 100%
+
+.ctaBtn 
+    display: inline-block
 
 // icons
 .icon 
@@ -146,17 +166,17 @@ video.hidden-xs
 
 // lists
 ul, ol
-    border-top:1px solid brand1
-    border-bottom: 2px solid brand1
-    padding: 0.3em 0.5em 0.5em 0em
-    {marginT}
+    border-bottom:3px solid brand1
+    border-top: 1px solid blackAlp10
+    padding: 0
+    margin: 1em 0
 .rev ul,.rev ol
     border-top:1px solid lightGrey
     border-bottom: 2px solid lightGrey
 li
     list-style-type: none
-    padding: 0.7em 3em 0.7em 0.5em
-    border-bottom: 1px solid brand1
+    padding: 1em 1em 1em 0
+    border-bottom: 1px solid blackAlp10
 .rev li
     border-bottom: 1px solid lightGrey
 li:last-child
@@ -175,17 +195,15 @@ nav ul
     justify-content: space-between
     {marginNo}
 nav li 
-    padding: 0 padStd
+    padding: 0 padXS*1.2
 footer nav ul
     flex-direction: column
-    {marginT}
-footer nav li
-    padding: 1.0em 0
+    //{marginT}
 ul.iconList
     border: none
 ul.iconList li
-    padding: 0.1em 1em 0.3em 0
-    font-size: 97%
+    padding: 0.1em 1em 0.1em 0
+    font-size: 1.2em
     border: none
 
 

@@ -1,34 +1,45 @@
 /*! 
 * layout 
 */
-body > main,
-body > footer
-    padding: 0 padL padM padL
+body > main > header
+body > main > article,
+    //padding: 0 padXL padM padXL
     @media dtrigger
-        padding: 0 padXS padXS padXS
+        padding: padXS padL*1.5 padXS padL*1.5
     @media ie
         display: block
-main > *
-    margin-bottom: marM
+
+main > *:nth-child(1)
+    background-color: brand4
     @media dtrigger
-        margin-bottom: marXS
-main > header.copy
-    @media mtrigger
-        padding-top: padXL
+        padding: padXS padL*1.5 padXS padL*1.5
+
+main > *:nth-child(2)
+    background-color: brand4
     @media dtrigger
-        border-top: 2px solid brand1
-        
+        padding: padXS padL*1.5 padXS padL*1.5
+
+body > main > article:last-of-type
+  @media dtrigger
+        padding-bottom: padL
+  
 
 
 // footer
+body > footer
+    border-top: 1px solid white
+    padding: padXL padM
+    @media dtrigger
+        padding: padM padL*1.5
+
 body > footer 
-    background-color: whiteAlp75
-    padding-top: padM
-    padding-bottom: padXL
+    background-color: brand4
 body > footer div.content
     @media tabletRule
         flex-wrap: wrap
 body > footer div.content > section
+    @media phoneRule
+        margin-bottom: marXL
     @media tabletRule
         flex:0 1 auto
         flex-basis: 40%
@@ -38,18 +49,15 @@ body > footer div.content > section:last-child
 // custom footer    
 body > footer div.content
     @media dtrigger
+        column-gap: marM
         justify-content: flex-start
 body > footer div.content > section
     @media dtrigger
-        flex:0 1 auto
-        flex-basis: 22%
-        padding-right: 3%
+        flex:1 1 20%
+        //padding-right: 3%
 body > footer div.content > section:last-child
     @media dtrigger
         margin-left: auto
-body > footer div.logo
-    @media mtrigger
-        display: none
 footer div > header
         padding-bottom: padM    
 
@@ -90,7 +98,9 @@ div.content
     display: flex
     justify-content: space-between
     flex-direction: column
+    padding: 1vw 0 0 0
     @media ttrigger
+        column-gap: 1vw
         flex-direction: row
         justify-content: space-between
 div.content > section
@@ -109,15 +119,12 @@ footer section
 main > *:not(.grid) div.content > section
     padding: padXS padM padXS padM
     @media dtrigger
-        margin-right: marXS
         padding-right: padL
     @media tabletRule 
         flex: 0 1 auto 
         flex-basis: 46%
         padding: padXS padStd padXS padStd
-main > *:not(.grid) div.content > section:last-child
-    @media dtrigger
-        margin-right: 0    
+  
 
 main > *:first-child div.content
     @media tabletRule
@@ -271,23 +278,24 @@ main > .grid.fancy div.content > section > a
 main > .copy div.content > section
     max-width: 90%
     flex-basis: 90%
-    @media desktopRule
+    @media tabletRule
+        padding-left: 10vw
+        padding-right: 10vw
+    @media dtrigger
         padding-left: 22vw
         padding-right: 22vw
-    @media lgdesktopRule
-        padding-left: 28vw
-        padding-right: 28vw    
 
-main > .copy div.content > section,
+
+//main > .copy div.content > section,
 main > .copyMulti
-    padding-top: padM*1.5
-    padding-bottom: padM    
+    //padding-top: 0
+    //padding-bottom: padM    
     @media dtrigger
-        padding-top: padL*1.35
-        padding-bottom: padL*1.35
+        //padding-top: padL*1.35
+        //padding-bottom: padL
 main > .copyMulti section
     @media mtrigger
-        padding-bottom: padXL !important
+        //padding-bottom: padXL !important
 
 
 
@@ -321,7 +329,7 @@ main > .copyMulti section
     @media phLandscape
         height: navSpacerL
 #mNav
-    background-color: white
+    background-color: brand4
     height: navSpacer
     width: 100vw
     position fixed
@@ -335,7 +343,8 @@ main > .copyMulti section
         height: navSpacerL
 #cNav,
 #dNav
-    padding: 0 padXS
+    padding: padXXS padM
+    background-color: brand4
 #mNav nav,
 #cNav nav,
 #dNav nav
@@ -360,7 +369,7 @@ main > .copyMulti section
     padding: padStd
     align-items: center
 #dNav nav
-    padding: padM padStd
+    padding: padStd
 @media mtrigger
     div#dNav,
     div#cNav
@@ -382,7 +391,7 @@ div.mblnav
     left: 0
     width: 100%
     height: 100%
-    background-color: rgba( 255,255,255,1.0)
+    background-color: brand4
 div.mblnavContainer
     position: absolute
     top: 0
@@ -477,6 +486,14 @@ main > * > div.imageBlocks section > *:last-child*/
         padding-top: padXL
 main > * > div.imageBlocks section > a.cta
    margin-top: auto
+
+
+
+.simpleFlex
+    display: flex
+    flex-wrap: nowrap
+    column-gap: 20px
+    align-items: center
 
 
 
