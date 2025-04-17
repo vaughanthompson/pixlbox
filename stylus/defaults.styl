@@ -17,9 +17,17 @@ brand1 = rgba(26,26,26,1.0) //#
 brand2 = rgba(0,0,0,1.0) //#
 brand3 = rgba(255,0,0,1.0) //#
 
-brand4 = rgba(235,234,232,1.0) //#EBEAE8
-brand5 = rgba(0,0,0,1.0) //#
-brand6 = rgba(0,0,0,1.0) //#
+brand4 = rgba(235,234,232,1.0) //#EBEAE8 main bg color
+
+brand5 = rgba(219,216,213,1.0) //#DBD8D5
+brand6 = rgba(206,204,202,1.0) //#CECCCA
+brand7 = rgba(193,189,188,1.0) //#C1BDBC
+
+brand8 = rgba(211,206,203,1.0) //#D3CECB
+brand9 = rgba(198,190,182,1.0) //#C6BEB6
+brand10 = rgba(81,77,76,1.0) //#514D4C
+
+
 
 brand2Alp50 = rgba(0,121,162,0.5)
 
@@ -37,21 +45,37 @@ brand2Alp50 = rgba(0,121,162,0.5)
     color: brand5
 .brand6color
     color: brand6
+.brand7color
+    color: brand7
+.brand8color
+    color: brand8
+.brand9color
+    color: brand9
+.brand10color
+    color: brand10
 
-.brand0 
+.brand0bg 
     background-color: brand0
-.brand1 
+.brand1bg
     background-color: brand1
-.brand2 
+.brand2bg 
     background-color: brand2
-.brand3 
+.brand3bg 
     background-color: brand3
-.brand4 
+.brand4bg 
     background-color: brand4
-.brand5 
+.brand5bg 
     background-color: brand5
-.brand6 
+.brand6bg 
     background-color: brand6
+.brand7bg 
+    background-color: brand7
+.brand8bg 
+    background-color: brand8
+.brand9bg 
+    background-color: brand9
+.brand10bg 
+    background-color: brand10
 
 
 
@@ -167,10 +191,13 @@ wh100 = @block {
 test = @block {
     border:1px solid red
 }
+test2 = @block {
+    border:1px solid cyan
+}
 
 // heights
 fullH = 100vh
-largeH = 85vh
+largeH = 70vh
 halfH = 50vh
 smallH = 25vh
 
@@ -194,6 +221,12 @@ body
 hr
     border: none
     border-bottom: 1px solid lightGrey
+
+hr.thick
+    border: none
+    border-bottom: 3px solid lightGrey
+hr.thick.active
+    border-bottom-color: brand1
 
 
 
@@ -222,12 +255,7 @@ hr.small
 .bgPosBottom
     background-position: -1px 100%
 
-.redacted
-    background-color: whiteAlp50
-    display: inline
-    padding-right: 1vw
-    background-clip: padding-box
-    line-height: 150%
+
 
 
 span.spacer
@@ -258,7 +286,27 @@ span.spacer25
     @media phoneRule
         padding: padM
 
+.padMeMore
+    padding: padL
+    @media phoneRule
+        padding: padM
 
 .alignEnd
     align-self: flex-end
 
+
+
+
+// padding control
+.padBtmXS
+    padding-bottom: padXS !important
+.padBtmXXS
+    padding-bottom: padXXS !important
+.padBtmNo
+    padding-bottom: 0 !important
+.padTopXS
+    padding-top: padXS !important
+.padTopXXS
+    padding-top: padXXS !important
+.padTopNo
+    padding-top: 0 !important

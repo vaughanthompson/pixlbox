@@ -1,34 +1,42 @@
 /*! 
 * layout 
 */
-body > main > header
-body > main > article,
+body > main > header,
+body > main > article
     //padding: 0 padXL padM padXL
     @media dtrigger
-        padding: padXS padL*1.5 padXS padL*1.5
+        padding: padM padL*1.5 padM padL*1.5
     @media ie
         display: block
+    
 
 main > *:nth-child(1)
     background-color: brand4
     @media dtrigger
-        padding: padXS padL*1.5 padXS padL*1.5
+        padding: padM padL*1.5 padL padL*1.5
 
 main > *:nth-child(2)
     background-color: brand4
     @media dtrigger
-        padding: padXS padL*1.5 padXS padL*1.5
+        padding: padM padL*1.5 padL padL*1.5
 
 body > main > article:last-of-type
   @media dtrigger
         padding-bottom: padL
   
-
+@media lgdesktopRule
+    #cNav > nav,
+    #dNav > nav,
+    footer > *,
+    main > * > *
+        max-width: 2000px
+        margin-left: auto !important
+        margin-right: auto !important
 
 // footer
 body > footer
     border-top: 1px solid white
-    padding: padXL padM
+    padding: padXL 7vw
     @media dtrigger
         padding: padM padL*1.5
 
@@ -98,9 +106,10 @@ div.content
     display: flex
     justify-content: space-between
     flex-direction: column
-    padding: 1vw 0 0 0
+    padding: 0
     @media ttrigger
-        column-gap: 1vw
+        padding: 2vw 0 0 0
+        column-gap: 2vw
         flex-direction: row
         justify-content: space-between
 div.content > section
@@ -119,12 +128,13 @@ footer section
 main > *:not(.grid) div.content > section
     padding: padXS padM padXS padM
     @media dtrigger
-        padding-right: padL
+        //padding-right: padL
     @media tabletRule 
         flex: 0 1 auto 
         flex-basis: 46%
         padding: padXS padStd padXS padStd
-  
+
+
 
 main > *:first-child div.content
     @media tabletRule
@@ -152,6 +162,10 @@ main > .grid div.content
         grid-row-gap: padXS
     @media dtrigger
         grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr))
+        grid-column-gap: padXS
+        grid-row-gap: padXS
+    @media lgdesktopRule
+        grid-template-columns: repeat(auto-fill, minmax(12vw, 1fr))
         grid-column-gap: padXS
         grid-row-gap: padXS
 
@@ -278,6 +292,8 @@ main > .grid.fancy div.content > section > a
 main > .copy div.content > section
     max-width: 90%
     flex-basis: 90%
+    @media phoneRule
+        padding: 10vw
     @media tabletRule
         padding-left: 10vw
         padding-right: 10vw
@@ -287,15 +303,55 @@ main > .copy div.content > section
 
 
 //main > .copy div.content > section,
-main > .copyMulti
-    //padding-top: 0
-    //padding-bottom: padM    
+main > .copyMulti div.content > section
     @media dtrigger
-        //padding-top: padL*1.35
-        //padding-bottom: padL
-main > .copyMulti section
-    @media mtrigger
-        //padding-bottom: padXL !important
+        padding: padXS padM padXS padM 
+main > .copyMulti div.content > section:first-of-type
+    @media dtrigger
+        padding-left: 0 
+        margin-left: padL 
+main > .copyMulti div.content > section:last-of-type
+    @media dtrigger
+        padding-right: padL
+
+
+
+
+div.selections div.selectionsHeader
+    justify-content: flex-start
+    align-items: flex-end
+    column-gap: 0
+div.selections div.selectionsContent
+    justify-content: flex-start
+    column-gap: 0
+div.selections div.selectionsHeader section
+div.selections div.selectionsContent section
+    flex:0 1 auto
+div.selections div.selectionsHeader section:first-of-type,
+div.selections div.selectionsContent section:first-of-type
+    flex-basis: 100px
+    flex-shrink: 0
+div.selections div.selectionsHeader section:last-of-type
+div.selections div.selectionsContent section:last-of-type
+    padding-left: 0
+    margin-right: 100px + padL
+    flex-basis: 100%
+
+
+div.selections div.selectionsHeader section
+    border-bottom: 3px solid brand4
+div.selections.inactive div.selectionsHeader section
+    border-bottom-color: brand1
+div.selections.inactive div.selectionsHeader 
+    opacity: 0.1
+div.selections.inactive div.selectionsContent 
+    display: none
+
+div.selections div.content.selectionsHeader
+    padding-top: 0
+
+
+
 
 
 
@@ -457,7 +513,7 @@ main > * > div.picturefill-background div.content section
 main > * > div.imageBlocks section
     min-height: 40vh 
     @media dtrigger 
-        min-height: 23vw
+        min-height: 20vw
     @media ie 
         min-height: 21em    
 main > * > div.imageBlocks section
@@ -466,17 +522,16 @@ main > * > div.imageBlocks section
     flex-wrap: wrap
     align-items: flex-start
     @media phoneRule
-        {marginM}
-        padding-top: padXL !important
-        padding-bottom: padXL !important
+        //{marginM}
+        padding: padXL !important
     @media tabletRule
         {marginT}
         padding-top: padL !important
         padding-bottom: padL !important
     @media dtrigger 
         margin-bottom: 0
-        padding-top: padL !important
-        padding-bottom: padM !important
+        padding-top: padL*0.9 !important
+        padding-bottom: padM*0.9 !important
 main > * > div.picturefill-background div.content/*,
 main > * > div.imageBlocks section > *:last-child*/
     padding-bottom: padL
@@ -486,6 +541,10 @@ main > * > div.imageBlocks section > *:last-child*/
         padding-top: padXL
 main > * > div.imageBlocks section > a.cta
    margin-top: auto
+
+
+
+
 
 
 

@@ -12,20 +12,22 @@ a:link,
 .mblnav a:link, .mblnav a:visited
     color: brand1
 a:visited, .rev a:visited
-    color: brand3
+    color: brand1
 a:hover, a:active
     text-decoration: none
 ul a:link, ul a:visited
     color: brand1
     text-decoration: none
-    font-weight: 600
     padding: padXS 0 0 0
     letter-spacing: 0 
     display: inline-block
+nav a:link
+    font-weight: 600
 nav a:link.activeLink, nav a:visited.activeLink
     padding-bottom: padXS*0.7
     color: brand3
     border-bottom: 3px solid brand3
+    
 footer nav li 
     margin-bottom: 0.5em
 footer nav a:link.activeLink
@@ -44,8 +46,8 @@ nav ul a:not(.activeLink):hover::after
 
 p, li, a, td
     color: brand1
-    line-height: 145%
-    letter-spacing: -0.01em
+    line-height: 125%
+    //letter-spacing: -0.01em
 
 
 
@@ -55,7 +57,7 @@ h1, h2, h3, h4 ,h5, h6
 
 // defaults   
 h1, .h1
-    font-weight: 700
+    font-weight: 900
     font-size: 4.6em
     line-height: 1em
     letter-spacing: -0.01em
@@ -69,9 +71,12 @@ h2, .h2
     font-size: 3em
     line-height: 1.05em
     letter-spacing: -0.02em 
+    @media phoneRule
+        font-size: 8vw
+        margin-bottom: 5vw
         
 h3, .h3
-    font-weight: 500
+    font-weight: 600
     font-size: 2.2em
     line-height: 115%
     letter-spacing: -0.01em 
@@ -100,11 +105,13 @@ h6, .h6
     //letter-spacing: -0.015em
 p
     font-weight: 400
-    font-size: 1.15em
+    font-size: 1.1em
     line-height: 1.4em
     margin-top: 0em
-li
-    //font-size: 1.1em
+main .content li
+    font-size: 1.2em
+    line-height: 1.4em
+
 strong 
     font-weight: 600
     //letter-spacing: -0.015em
@@ -114,7 +121,8 @@ strong
     font-size: 90% 
 
 
-
+main .content ul a:link,  main .content ul a:visited
+    text-decoration: underline
 
 
 
@@ -127,7 +135,14 @@ strong
 
 
 
-
-
-
-
+/*
+input[type=radio] 
+    accent-color: red
+*/
+ul.vanilla
+ul.vanilla li 
+    border: none
+ul.vanilla
+    margin-top: 0
+ul.vanilla li 
+    padding:padXXS
