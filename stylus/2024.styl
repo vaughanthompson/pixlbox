@@ -58,13 +58,29 @@ a.wrapperLink
     div.item.rev div.itemContent.multiply
         background-blend-mode: overlay
 
-
 div.item div.itemContent
     height: largeH
     @media phoneRule
-        height: 75vh
+        height: auto
+        padding-top: padXL*2
+        padding-bottom: padXL
     @media ttrigger
        max-height: 720px
+
+div.slickSlider div.item div.itemContent
+    height: largeH
+    @media phoneRule
+        height: 75vh
+        padding-top: 0
+        padding-bottom: 0
+    @media ttrigger
+       max-height: 720px
+
+
+
+
+
+
 
 div.item div.itemContent div:last-of-type
     display: flex

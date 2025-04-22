@@ -37,6 +37,8 @@ body > main > article:last-of-type
 body > footer
     border-top: 1px solid white
     padding: padXL 7vw
+    @media phoneRule
+        margin-top: marXL
     @media dtrigger
         padding: padM padL*1.5
 
@@ -96,7 +98,8 @@ div.mblnav
 // margin padding
 main > *
     @media phoneRule
-        {marginM}
+        //{marginM}
+        
    /* @media tabletRule
         {marginT} */
 
@@ -127,13 +130,17 @@ footer section
         padding: padXS padStd padXS padStd
 main > *:not(.grid) div.content > section
     padding: padXS padM padXS padM
+    @media phoneRule
+        padding: padXL padXL 0 padXL
     @media dtrigger
         //padding-right: padL
     @media tabletRule 
         flex: 0 1 auto 
         flex-basis: 46%
         padding: padXS padStd padXS padStd
-
+main div > header
+    @media phoneRule
+        padding: padXL padXL 0 padXL
 
 
 main > *:first-child div.content
@@ -176,8 +183,7 @@ main > .grid div.content > section
     @media mtrigger
         flex: 0 1 auto
         flex-basis: 100%
-        margin-top: padStd
-        margin-bottom: padStd
+        margin: marXL marXL 0 marXL 
         min-height: 20vw
     @media ttrigger
         min-height: 27.5vw
@@ -321,9 +327,15 @@ div.selections div.selectionsHeader
     justify-content: flex-start
     align-items: flex-end
     column-gap: 0
+    @media phoneRule
+        display: block
+        padding: padXL padXL 0 padXL
 div.selections div.selectionsContent
     justify-content: flex-start
     column-gap: 0
+    @media phoneRule
+        display: block
+        padding: padXL padXL 0 padXL
 div.selections div.selectionsHeader section
 div.selections div.selectionsContent section
     flex:0 1 auto
@@ -336,6 +348,8 @@ div.selections div.selectionsContent section:last-of-type
     padding-left: 0
     margin-right: 100px + padL
     flex-basis: 100%
+    @media phoneRule
+        margin-right: auto
 
 
 div.selections div.selectionsHeader section
@@ -524,6 +538,7 @@ main > * > div.imageBlocks section
     @media phoneRule
         //{marginM}
         padding: padXL !important
+        margin: marXL marXL 0 marXL
     @media tabletRule
         {marginT}
         padding-top: padL !important
