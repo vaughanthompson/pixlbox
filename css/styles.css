@@ -816,6 +816,11 @@ main > .copy div.content > section {
     padding-right: 5vw;
   }
 }
+@media screen and (max-width: 750px) {
+  div.selections {
+    padding: 10vw 10vw 0 10vw;
+  }
+}
 div.selections div.selectionsHeader {
   -webkit-box-pack: start;
   -o-box-pack: start;
@@ -832,7 +837,6 @@ div.selections div.selectionsHeader {
 @media screen and (max-width: 750px) {
   div.selections div.selectionsHeader {
     display: block;
-    padding: 10vw 10vw 0 10vw;
   }
 }
 div.selections div.selectionsContent {
@@ -847,7 +851,6 @@ div.selections div.selectionsContent {
 @media screen and (max-width: 750px) {
   div.selections div.selectionsContent {
     display: block;
-    padding: 10vw 10vw 0 10vw;
   }
 }
 div.selections div.selectionsHeader section,
@@ -858,12 +861,25 @@ div.selections div.selectionsContent section {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
+@media screen and (max-width: 750px) {
+  div.selections div.selectionsHeader section,
+  div.selections div.selectionsContent section {
+    padding-top: 5vw;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 div.selections div.selectionsHeader section:first-of-type,
 div.selections div.selectionsContent section:first-of-type {
   -ms-flex-preferred-size: 100px;
       flex-basis: 100px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+@media screen and (max-width: 750px) {
+  div.selections div.selectionsContent section:first-of-type {
+    display: none;
+  }
 }
 div.selections div.selectionsHeader section:last-of-type,
 div.selections div.selectionsContent section:last-of-type {
@@ -875,11 +891,14 @@ div.selections div.selectionsContent section:last-of-type {
 @media screen and (max-width: 750px) {
   div.selections div.selectionsHeader section:last-of-type,
   div.selections div.selectionsContent section:last-of-type {
-    margin-right: auto;
+    margin-right: 0;
   }
 }
 div.selections div.selectionsHeader section {
   border-bottom: 3px solid #ebeae8;
+}
+div.selections div.selectionsHeader section:first-of-type {
+  border-bottom: none;
 }
 div.selections.inactive div.selectionsHeader section {
   border-bottom-color: #1a1a1a;
@@ -1903,6 +1922,11 @@ div.revealText {
 .selections select option {
   font-family: "Satoshi-VR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+@media screen and (max-width: 750px) {
+  .selections select {
+    width: 90%;
+  }
+}
 .selections textarea {
   font-family: "Satoshi-VR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.2em;
@@ -1912,16 +1936,20 @@ div.revealText {
 }
 @media screen and (max-width: 750px) {
   .selections textarea {
-    width: 90vw;
+    width: 90%;
   }
 }
+.selections input.form-control,
+.selections input[type=file],
 .selections.submit input.form-control {
   width: 90%;
   margin: 5px;
 }
 @media screen and (max-width: 750px) {
+  .selections input.form-control,
+  .selections input[type=file],
   .selections.submit input.form-control {
-    width: 90vw;
+    width: 90%;
   }
 }
 .selections.submit fieldset {
@@ -1965,12 +1993,58 @@ div.revealText {
 .selections ul.vanilla {
   margin-bottom: 2em;
 }
+@media screen and (max-width: 750px) {
+  .selections ul.vanilla {
+    margin-top: 3vw;
+    margin-bottom: 10vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .selections ul.vanilla li {
+    margin-bottom: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-column-gap: 3vw;
+    -moz-column-gap: 3vw;
+    column-gap: 3vw;
+    -webkit-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1em;
+  }
+}
+.selections ul.vanilla:first-of-type li:last-child {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 750px) {
+  .selections ul.vanilla:first-of-type input.form-control {
+    width: 85%;
+    margin-top: 0.5em;
+    margin-left: 1.5em;
+  }
+}
 .sendRequest {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .sendRequest:hover {
   background-color: #1a1a1a !important;
+}
+@media screen and (max-width: 750px) {
+  .selections input.cta {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+    display: block;
+  }
 }
 .content hr {
   border-bottom: 2px solid #1a1a1a;

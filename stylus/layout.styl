@@ -322,38 +322,47 @@ main > .copyMulti div.content > section:last-of-type
 
 
 
-
+div.selections
+    @media phoneRule
+        padding: padXL padXL 0 padXL
 div.selections div.selectionsHeader
     justify-content: flex-start
     align-items: flex-end
     column-gap: 0
     @media phoneRule
         display: block
-        padding: padXL padXL 0 padXL
 div.selections div.selectionsContent
     justify-content: flex-start
     column-gap: 0
     @media phoneRule
         display: block
-        padding: padXL padXL 0 padXL
+        
 div.selections div.selectionsHeader section
 div.selections div.selectionsContent section
     flex:0 1 auto
+    @media phoneRule
+        padding-top: padL
+        padding-right: 0
+        padding-left: 0
 div.selections div.selectionsHeader section:first-of-type,
 div.selections div.selectionsContent section:first-of-type
     flex-basis: 100px
     flex-shrink: 0
+div.selections div.selectionsContent section:first-of-type
+    @media phoneRule
+        display: none
 div.selections div.selectionsHeader section:last-of-type
 div.selections div.selectionsContent section:last-of-type
     padding-left: 0
     margin-right: 100px + padL
     flex-basis: 100%
     @media phoneRule
-        margin-right: auto
-
+        margin-right: 0
 
 div.selections div.selectionsHeader section
     border-bottom: 3px solid brand4
+div.selections div.selectionsHeader section:first-of-type
+    border-bottom: none
 div.selections.inactive div.selectionsHeader section
     border-bottom-color: brand1
 div.selections.inactive div.selectionsHeader 

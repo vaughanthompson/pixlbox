@@ -142,6 +142,9 @@ div.revealText
 /* selections */
 .selections select option
     font-family: fontStack
+.selections select
+    @media phoneRule
+        width: 90%
 .selections textarea
     font-family: fontStack
     font-size: 1.2em
@@ -149,13 +152,15 @@ div.revealText
     width: 50vw
     max-width: 700px
     @media phoneRule
-        width: 90vw
+        width: 100% - padXL
 
+.selections input.form-control
+.selections input[type=file]
 .selections.submit input.form-control
     width: 90%
     margin: 5px 
     @media phoneRule
-        width: 90vw
+        width: 100% - padXL
 
 .selections.submit fieldset
     margin-bottom: 1em
@@ -175,9 +180,34 @@ div.revealText
 
 .selections ul.vanilla 
     margin-bottom: 2em
-
+    @media phoneRule
+        margin-top: marM
+        margin-bottom: marXL
+.selections ul.vanilla li
+    @media phoneRule
+        margin-bottom: marM
+        display: flex
+        column-gap: 3vw
+        align-items: center
+        font-size: 1em
+.selections ul.vanilla:first-of-type li:last-child
+        flex-wrap: wrap
+.selections ul.vanilla:first-of-type input.form-control
+    @media phoneRule
+        width: 85%
+        margin-top: 0.5em
+        margin-left: 1.5em
 .sendRequest
     transition: 0.3s
 
 .sendRequest:hover
     background-color: brand0 !important
+
+
+.selections input.cta   
+    @media phoneRule
+        width: 100%
+        padding: 1em
+        margin-bottom: 1em
+        text-align: left
+        display: block
